@@ -36,7 +36,7 @@ def parse(message,duration=1):
     if message[0:3] == [1,1,1,1]:
         cleaned = message[4::]
         x = 0
-        for x <= len(cleaned):
+        while x <= len(cleaned):
             if cleaned[x]==1 && cleaned[x+1]==1:
                 morse = morse + '-'
             elif cleaned[x]==1 && cleaned[x+1]==0:
