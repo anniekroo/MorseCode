@@ -1,6 +1,6 @@
 # Sending morse code signals through LED connected to the Raspi
 # timing - start off with a variable time, change length of time for bit
-# spacing -
+# spacing - 
 # set it high for two bits and low for two bits (each ltter is 1 bit)
 # one bit between letters and two bits between words
 
@@ -12,7 +12,7 @@ max_length = 20;
 msg = "PRAVA SOS"
 
 
-MORSECODE = {"A": ".-",     "B": "-...",   "C": "-.-.",
+MORSECODE = {"A": ".-",     "B": "-...",   "C": "-.-.", 
         "D": "-..",    "E": ".",      "F": "..-.",
         "G": "--.",    "H": "....",   "I": "..",
         "J": ".---",   "K": "-.-",    "L": ".-..",
@@ -45,9 +45,9 @@ def encode_morse(word):
 	morseword = ""
 	for char in word:
 		if char == " ":
-			morseword += " "
-		morseword = morseword + MORSECODE[char.upper()]
-	return morseword
+			morseword = morseword + " "
+		else:
+			morseword = morseword + MORSECODE[char.upper()]
 
 def delay(duration):
 	time.sleep(duration)
