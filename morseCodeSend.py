@@ -1,18 +1,18 @@
 # Sending morse code signals through LED connected to the Raspi
 # timing - start off with a variable time, change length of time for bit
-# spacing - 
+# spacing -
 # set it high for two bits and low for two bits (each ltter is 1 bit)
 # one bit between letters and two bits between words
 
 import time;
-import RPI.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 t = 0.5;	# seconds, time between symbols is 1 bit time, between letter is 3 bit time, figure out how long it takes
 max_length = 20;
 msg = "PRAVA SOS"
 
 
-MORSECODE = {"A": ".-",     "B": "-...",   "C": "-.-.", 
+MORSECODE = {"A": ".-",     "B": "-...",   "C": "-.-.",
         "D": "-..",    "E": ".",      "F": "..-.",
         "G": "--.",    "H": "....",   "I": "..",
         "J": ".---",   "K": "-.-",    "L": ".-..",
