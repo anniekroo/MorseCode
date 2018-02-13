@@ -63,6 +63,7 @@ if __name__ == "__main__":
        message = receive()
        morse = parse(message)
        out = text(morse)
+       print out
 
 bittime = 1
 MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
