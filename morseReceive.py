@@ -28,7 +28,7 @@ def receive(blinks=40,duration=1,pin=23):
     prepare_pin(pin)
     message = []
     for i in range(blinks):
-        message.append(if read_pin(pin))
+        message.append(read_pin(pin))
         delay(duration/2.)
     return message
 def parse(message,duration=1):
